@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<title>Inter Designs - Contact</title>
+	<meta name="author" content="Jack Deadman">
+	<meta name="description" content="A UK Leading design company!">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<script src="js/main.min.js"></script>
+</head>
+<body>
+	<div id="main-wrapper">
+		<header id="site-header">
+			<nav>
+				<div class="branding">
+					<a href="index.html" accesskey="1"><img src="images/logo.png" alt="Inter Designs"></a>
+				</div>
+				<ul class="menu-bar">
+					<li><a href="about.html" accesskey="2">about</a></li>
+					<li><a href="news.html" accesskey="3">news</a></li>
+					<li><a href="demo.html" accesskey="4">demo</a></li>
+				</ul>
+			</nav>
+		</header><!-- END #site-header -->
+
+		<h1>Contact Us</h1>
+		<p>We greatly appretiate all the feedback that we recieve. Let us know about any issues you are experiencing and our support team will get back to you as soon as possible.</p>
+
+		<form id="contact-form" action="http://www.dcs.shef.ac.uk/cgi-bin/FormMail.pl">
+			<input type="hidden" name="recipient" value="jdeadman1@sheffield.ac.uk">
+
+			<div class="form-row">
+				<label for="name">Name: </label>
+				<input id="name" name="name" autofocus placeholder="Joe Doe" type="text" required>
+			</div>
+
+			<div class="form-row">
+				<label for="name-email">Email: </label>
+				<input id="name-email" name="email" placeholder="name@example.com" type="email">
+			</div>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" placeholder="Let us know what you think..." data-max="200"></textarea>
+
+			<div class="form-bottom">
+				<input class="button button-primary" value="Send" type="submit">
+				<div id="chars-left"></div>
+			</div>
+		</form><!-- END #contact-form -->
+
+		<footer id="site-footer">
+			<ul>
+				<li><a href="site-map.html" accesskey="m">Site Map</a></li>
+				<li><a href="contact.html" accesskey="c">Contact Us</a></li>
+				<li><a href="accessibility.html" accesskey="a">Accessibility</a></li>
+				<li>&copy; 2014, Inter Designs</li>
+			</ul>
+		</footer><!-- END #site-footer -->
+	
+	</div><!-- END #main-wrapper -->
+</body>
+</html>
