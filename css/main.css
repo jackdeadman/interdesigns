@@ -1,0 +1,719 @@
+/**
+ * Description: Main css file for the entire site
+ * Version: 1.0.0
+ * Last update: 2014/12/02
+ * Author: Jack Deadman <jdeadman1@sheffield.ac.uk>
+ *
+ * Summary:
+ *
+ *	0. ELEMENT
+ *	1. CLASSES
+ *		- 1.1.  Branding
+ *		- 1.2.  Menu-bar
+ *		- 1.3.  Testimonials
+ *		- 1.4.  Quote
+ *		- 1.5.  Cases
+ *		- 1.6.  Image-Holder
+ *		- 1.7.  Paired-List
+ *		- 1.8.  Date
+ *		- 1.9.  News-Story
+ *		- 1.10. Buttons
+ *		- 1.11. Fancy-List
+ *		- 1.12. Text-styles
+ *		- 1.13. Figures
+ *		- 1.14. Address
+ *	2. IDs - Main Layout
+ *		- 2.1.  Site-Header
+ *		- 2.2.  Main-Wrapper
+ *		- 2.3.  Footer
+ *	3. IDs - Page Specific
+ *		- 3.1.  Bio
+ *		- 3.2.  Contact
+ *		- 3.3.  News
+ *		- 3.4.  Demo
+ *		- 3.5.  Home Page
+ *	4. @Media (900px)
+ *	5. @Media (700px)
+ */
+
+/* ==========================================================================
+   0. ELEMENTS
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6em;
+	margin: 0;
+}
+
+h1,h2,h5,h6 {
+	color: rgb(0, 174, 239);
+}
+
+h3,h4 {
+	color: rgb(247, 148, 30);
+}
+
+a {
+	color: rgb(190, 30, 45);
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: rgb(247, 148, 30);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	font: inherit;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-bottom: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	outline: 0;
+	border-color: rgb(247, 148, 30);
+}
+
+p {
+	padding: 10px 0;
+}
+
+/* ==========================================================================
+   1 CLASSES
+   ========================================================================== */
+
+/* 1.1 Branding
+   ========================================================================== */
+
+.branding {
+	float: left;
+}
+
+.branding img {
+	height: 100px;
+}
+
+/* 1.2 Menu-bar
+   ========================================================================== */
+
+.menu-bar a {
+	color: #555;
+}
+
+.menu-bar a:hover,
+.menu-bar a:focus,
+.menu-bar a:active {
+	/* Fallback colour for browsers that do not support nth-child */
+	color: rgb(190, 30, 45);
+}
+
+/* Alternate the colour of list items between 3 different colours */
+.menu-bar li:nth-child(1) a:hover,
+.menu-bar li:nth-child(1) a:focus,
+.menu-bar li:nth-child(1) a.active {
+	color: rgb(190, 30, 45);
+}
+
+.menu-bar li:nth-child(2) a:hover,
+.menu-bar li:nth-child(2) a:focus,
+.menu-bar li:nth-child(2) a.active {
+	color: rgb(0, 174, 239);
+}
+
+.menu-bar li:nth-child(3) a:hover,
+.menu-bar li:nth-child(3) a:focus,
+.menu-bar li:nth-child(3) a.active {
+	color: rgb(247, 148, 30);
+}
+
+/* 1.3 Testimonials
+   ========================================================================== */
+
+.testimonials {
+	margin: 80px 0;
+}
+
+.testimonials ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+
+/* Clearfix hack */
+.testimonials ul:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.testimonials li{
+	display: inline-block;
+	width: 30%;
+	min-width: 50px;
+}
+
+/* 1.4 Quote
+   ========================================================================== */
+
+.quote:before {
+	content: "\201C"; /* Adds a quote infront of the element */
+	color: rgb(0, 174, 239);
+	font-family: serif; 
+	font-size: 3em;
+	position: relative;
+	top: 0.3em;
+	right: 0.1em;
+}
+
+/* 1.5 Cases
+   ========================================================================== */
+
+.case-small {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.case-medium {
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.case-large {
+	border: 1px solid #ccc;
+	padding: 40px;
+	margin-bottom: 40px;
+}
+
+/* 1.6 Image-holder
+   ========================================================================== */
+
+.image-hero {
+	overflow: hidden;
+	position: relative; /* Change context for p */
+	height: 350px;
+}
+
+.image-hero p {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+	border-left: 10px solid rgb(0, 174, 239);;
+	color: #fff;
+	padding: 20px;
+	margin: 0;
+	width: 40%
+}
+
+.image-hero {
+	background-color: #000; /* Default colour if no image is specified later on */
+	background-size: cover;
+}
+
+/* 1.7 Paired list
+   ========================================================================== */
+
+.paired-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.paired-list .key,
+.paired-list .value {
+	display: inline-block;
+}
+
+.paired-list .key {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	margin: 5px 10px 5px 0;
+}
+
+/* 1.8 Date
+   ========================================================================== */
+
+.date {
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+	padding: 10px;
+	vertical-align: middle;
+	border-left: 5px solid #ccc;
+}
+
+.date .day {
+	font-size: 2em;
+}
+
+.date .month {
+	font-style: italic;
+}
+
+/* 1.9 News-Story
+   ========================================================================== */
+
+.news-story {
+	border: 1px solid #ccc;
+	margin-bottom: 40px;
+}
+
+.news-story img {
+	width: 100%;
+	display: block;
+}
+
+.news-story header {
+	margin-bottom: 30px;
+}
+.news-story h2 {
+	margin-left: 20px;
+	width: 60%;
+}
+/* Clearfix hack */
+.news-story header:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.news-story h2 {
+	float: left;
+}
+
+.news-story p {
+	margin: 20px;
+	clear: both;
+}
+
+.news-story .content {
+	margin-bottom: 20px;
+}
+
+.news-story .date {
+	border-color: rgb(247, 148, 30); /* Fallback if nth-of-type isnt supported */
+}
+
+/* Alternate between free colours for the date left border */
+
+.news-story:nth-of-type(3n) .date {
+	border-color: rgb(247, 148, 30);
+}
+
+.news-story:nth-of-type(3n+1) .date {
+	border-color: rgb(190, 30, 45);
+}
+
+.news-story:nth-of-type(3n+2) .date {
+	border-color: rgb(0, 174, 239);
+}
+
+.news-story .read-more {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.news-story .date {
+	float: right;
+}
+
+/* 1.10 Buttons
+   ========================================================================== */
+
+.button {
+	font: inherit;
+	color: #fff;
+	padding: 10px 20px;
+	background-color: rgb(0, 174, 239);
+	border-width: 0 3px 3px 0;
+	border-color: rgb(0, 100, 139);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.button:hover {
+	background-color: rgb(30, 204, 269);
+	background-color: rgba(0, 174, 239, 0.8);
+	cursor: pointer;
+	color: #fff;
+}
+
+/* 1.11 Fancy list
+   ========================================================================== */
+
+.fancy-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.fancy-list a {
+	padding: 5px;
+	display: inline-block;
+}
+/* Creates a circle before each anchor to look like a bullet point */
+.fancy-list a:before {
+	display: inline-block;
+	content: "";
+	height: 10px;
+	width: 10px;
+	background-color: #000; /* Default to black if browser doesnt support nth-child */
+	margin-right: 10px;
+	border-radius: 50%;
+	transition: -webkit-transform 0.2s ease;
+	transition: transform 0.2s ease;
+	line-height: 20px;
+}
+
+.fancy-list li:nth-child(3n+1) a:before {
+	background-color: rgb(190, 30, 45);
+}
+
+.fancy-list li:nth-child(3n+2) a:before {
+	background-color: rgb(0, 174, 239);
+}
+
+.fancy-list li:nth-child(3n+3) a:before {
+	background-color: rgb(247, 148, 30);
+}
+
+.fancy-list a:hover:before {
+	-webkit-transform: scale(2,2);
+		 -moz-transform: scale(2,2);
+		  -ms-transform: scale(2,2);
+		   -o-transform: scale(2,2);
+	        transform: scale(2,2);
+}
+
+/* 1.12 Text Styles
+   ========================================================================== */
+
+.text-error {
+	color: rgb(255,10,10);
+}
+
+.text-warning {
+	color: rgb(235,130,19);
+}
+
+.text-success {
+	color: rgb(7,122,11);
+}
+
+/* 1.13 Figures
+   ========================================================================== */
+
+.fig-left, 
+.fig-right {
+	width: 30%;
+	border: 1px solid #ccc;
+}
+.fig-left img, 
+.fig-right img {
+	width: 100%;
+}
+
+.fig-left figcaption, 
+.fig-right figcaption {
+	padding: 10px;
+	text-align: center;
+}
+
+.fig-left {
+	float: left;
+	margin: 0 2em 2em 0;
+}
+
+.fig-right {
+	float: right;
+	margin: 0 0 2em 2em;
+}
+
+/* 1.14 Address
+   ========================================================================== */
+.address {
+	border: 1px solid #ccc;
+	padding: 20px;
+	display: inline-block;
+}
+
+/* ==========================================================================
+   IDs - Main Layout
+   ========================================================================== */
+
+/* Site-header
+   ========================================================================== */
+
+#site-header {
+	border-bottom: 1px solid #ccc;
+	font-size: 2em;
+	margin-bottom: 40px;
+}
+/* Clearfix hack */
+#site-header nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+#site-header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#site-header .menu-bar {
+	float: left;
+	margin-left: 40px;
+	line-height: 121px; /* 110 + 10 + 1 */
+}
+#site-header .menu-bar li {
+	display: inline-block;
+	text-transform: capitalize;
+}
+#site-header a {
+	text-decoration: none;
+}
+
+#site-header nav li {
+	padding: 0 20px;
+}
+
+/* Main-wrapper
+   ========================================================================== */
+
+#main-wrapper {
+	padding: 20px 100px;
+	margin: auto;
+	position: relative;
+}
+
+/* Site-footer
+   ========================================================================== */
+
+#site-footer {
+	border-top: 1px solid #ccc;
+	clear: both;
+	margin-top: 20px;
+	padding-top: 20px;
+	text-align: right;
+}
+
+#site-footer ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#site-footer ul li {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+#site-footer {
+	clear: both;
+}
+
+/* ==========================================================================
+   2. IDs - Page Specific
+   ========================================================================== */
+
+/* 2.1 Bio-section
+   ========================================================================== */
+
+/* Clearfix hack */
+#bio-section:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+#bio-section figcaption {
+	font-style: italic;
+	width: 70%;
+	margin: 0 auto;
+}
+#bio-section figure {
+	float: left;
+	margin: 0 20px 20px 20px;
+	text-align: center;
+}
+
+#bio-section img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+/* 2.2 Contact
+   ========================================================================== */
+
+#contact-form {
+	max-width: 500px;
+	margin: auto;
+}
+
+#contact-form:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#contact-form .form-row {
+	margin-bottom: 10px;
+}
+
+#contact-form .form-row input {
+	width: 100%;
+	max-width: 478px; /* 500 - 22 (from input styles) */
+}
+
+#contact-form textarea {
+	width: 100%;
+	max-width: 478px; /* 500 - 22 (from input styles) */
+	min-height: 200px;
+}
+
+#contact-form .form-bottom {
+	line-height: 50px;
+	height: 50px;
+}
+
+#contact-form .button {
+	float: right;
+	line-height: 1em;
+	height: 50px;
+}
+
+/* 2.3 News
+   ========================================================================== */
+
+#news-main {
+	width: 69%;
+	float: left;
+}
+
+#news-aside {
+	width: 29%;
+	float: right;
+}
+
+/* 2.4 Demo
+   ========================================================================== */
+
+#demo {
+	margin: auto;
+	display: block;
+}
+
+/* 2.5 Home page
+   ========================================================================== */
+
+/* Hero styles already applied through the class */
+#hero-main {
+	background-image: url('../images/desktop.jpeg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
+/* ==========================================================================
+   3. Media Queries
+   ========================================================================== */
+
+/* 3.1 Max-width 900px
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+	.branding {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	
+	.testimonials li {
+		display: block;
+		width: 80%;
+		margin: auto;
+		text-align: left;
+	}
+
+	.fancy-list.collapsable {
+		text-align: center;
+	}
+
+	.fancy-list.collapsable li {
+		display: inline-block;
+	}
+
+	#site-header .menu-bar {
+		float: none;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	#news-main {
+		width: 100%;
+	}
+
+	#news-aside {
+		width: 100%;
+	}
+
+	#main-wrapper {
+		padding: 0 30px;
+	}
+
+}
+
+/* 3.2 Max-width 700px
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+	#main-wrapper {
+		padding: 0 10px;
+	}
+
+	#site-header .menu-bar li {
+		display: block;
+		line-height: 2em;
+	}
+
+	#bio-section figure {
+		float: none;
+	}
+
+	.fig-left, .fig-right {
+		width: 100%;
+		margin: 20px 0;
+	}
+	.image-hero {
+		height: 200px;
+	}
+
+	.image-hero p { 
+		width: auto;
+	}
+}
